@@ -1,21 +1,10 @@
-# vpc CIDR
-variable vpc_cidr {
-	default = "192.168.0.0/16"
+variable ami {
+	default = "ami-0ff89c4ce7de192ea"
 }
 
-# Public Subnets
-variable public_subnet_1 {
-	default = "192.168.1.0/24"
-}
-variable public_subnet_2 {
-	default = "192.168.2.0/24"
+variable instance_type {
+	default = "t3.micro"
 }
 
-# Private Subnets
-variable private_subnet_1 {
-	default = "192.168.3.0/24"
+variable subnet_id {
 }
-variable private_subnet_2 {
-	default = "192.168.4.0/24"
-}
-
