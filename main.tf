@@ -1,8 +1,7 @@
-module "vpc" {
-	source = "./modules/vpc_module"
-}
-
-module "ec2" {
-	source = "./modules/ec2_module"
-	subnet_id = module.vpc.pri_subnet_1.id
+resource "aws_instance" "pvtec2" {
+  ami                         =  var.ami
+  instance_type               =  var.instance_type
+  subnet_id                   =  var.subnet_id
+  key_name                    =  "projectkey"
+  vpc_security_group_ids      =  "default" 
 }
